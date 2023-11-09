@@ -51,6 +51,12 @@ async function run(): Promise<void> {
       [],
       options
     );
+
+    core.debug("#####################################################")
+    core.debug(helmfileStdout)
+    core.debug("#####################################################")
+    core.debug(helmfileStderr)
+    core.debug("#####################################################")
     
     core.setOutput('exit-code', processExitCode);
     core.setOutput('helmfile-stdout', helmfileStdout);
